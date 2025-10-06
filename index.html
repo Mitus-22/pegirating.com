@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PEGI Questionnaire</title>
+    <meta name="description" content="Questionnaire to compute a game's PEGI rating">
+
+    <link rel="stylesheet" href="pegi_rating_bonito.css">
+    
+    <link rel="icon" type="image/png" href="png/pegilogo.png">
+
+</head>
+<body>
+    <div class="page">
+        <div class="container" role="main">
+            <header>
+                <div>
+                    <h1>PEGI Questionnaire</h1>
+                    <p class="lead">Answer the questions to get the PEGI rating for your game</p>
+                </div>
+            </header>
+
+            <form id="pegiForm">
+                <div class="questions" aria-labelledby="qtitle">
+                    <!-- Pregunta1 -->
+                    <fieldset>
+                        <legend>1. Does it contain violence? How?</legend>
+                        <div class="options">
+                            <div class="option"><input id="q1_A" type="radio" name="q1" value="A"><label for="q1_A">
+                                A) No violence at all, or a very mild/light form of violence ONLY in a comical context or childlike setting.
+                            </label></div>
+                            <div class="option"><input id="q1_B" type="radio" name="q1" value="B"><label for="q1_B">
+                                B) A very mild/light form of violence that is implied, non-detailed and/or non-realistic.
+                            </label></div>
+                            <div class="option"><input id="q1_C" type="radio" name="q1" value="C"><label for="q1_C">
+                                C) Violence slightly graphic towards fantasy characters, or human-like characters if is non-realistic.
+                            </label></div>
+                            <div class="option"><input id="q1_D" type="radio" name="q1" value="D"><label for="q1_D">
+                                D) Violence looks the same as would be expected in real life.
+                            </label></div>
+                            <div class="option"><input id="q1_E" type="radio" name="q1" value="E"><label for="q1_E">
+                                E) Realistic violence that is a depiction of gross violence, motiveless killing, or towards defenceless characters.
+                            </label></div>
+                            <div class="option"><input id="q1_F" type="radio" name="q1" value="F"><label for="q1_F">
+                                F) Don’t know yet.
+                            </label></div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Pregunta2 -->
+                    <fieldset>
+                        <legend>2. Does it contain bad language?</legend>
+                        <div class="options">
+                            <div class="option"><input id="q2_A" type="radio" name="q2" value="A"><label for="q2_A">
+                                A) Absolutely no bad language can be heard or read.
+                            </label></div>
+                            <div class="option"><input id="q2_B" type="radio" name="q2" value="B"><label for="q2_B">
+                                B) Bad language/swearing in our game is mild/light.
+                            </label></div>
+                            <div class="option"><input id="q2_C" type="radio" name="q2" value="C"><label for="q2_C">
+                                C) The use of bad language in our games is a bit more extreme than the other 2 options.
+                            </label></div>
+                            <div class="option"><input id="q2_D" type="radio" name="q2" value="D"><label for="q2_D">
+                                D) Don’t know yet.
+                            </label></div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Pregunta3 -->
+                    <fieldset>
+                        <legend>3. Are there sounds or pictures that are likely to frighten young children?</legend>
+                        <div class="options">
+                            <div class="option"><input id="q3_A" type="radio" name="q3" value="A"><label for="q3_A">
+                                A) Our game does not contain any sounds or pictures frightening to young children.
+                            </label></div>
+                            <div class="option"><input id="q3_B" type="radio" name="q3" value="B"><label for="q3_B">
+                                B) Our game contain scenes or sounds that MAY BE frightening to younger children.
+                            </label></div>
+                            <div class="option"><input id="q3_C" type="radio" name="q3" value="C"><label for="q3_C">
+                                C) More than "fear", our games contains horror content, but it is moderated.
+                            </label></div>
+                            <div class="option"><input id="q3_D" type="radio" name="q3" value="D"><label for="q3_D">
+                                D) Horror sequences or disturbing images in our game is intense and sustained.
+                            </label></div>
+                            <div class="option"><input id="q3_E" type="radio" name="q3" value="E"><label for="q3_E">
+                                E) Don’t know yet.
+                            </label></div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Pregunta4 -->
+                    <fieldset>
+                        <legend>4. Does it have sexual content? How?</legend>
+                        <small style="color:var(--muted);display:block;margin-bottom:8px">(Depictions of nudity in a non-sexual context are NOT considered)</small>
+                        <div class="options">
+                            <div class="option"><input id="q4_A" type="radio" name="q4" value="A"><label for="q4_A">
+                                A) Our game does not contain ANY TYPE of sexual content.
+                            </label></div>
+                            <div class="option"><input id="q4_B" type="radio" name="q4" value="B"><label for="q4_B">
+                                B) Only sexual innuendo or sexual posturing are present in the game.
+                            </label></div>
+                            <div class="option"><input id="q4_C" type="radio" name="q4" value="C"><label for="q4_C">
+                                C) Our game contains erotic nudity or sexual intercourse without visible genitals.
+                            </label></div>
+                            <div class="option"><input id="q4_D" type="radio" name="q4" value="D"><label for="q4_D">
+                                D) Our game contains explicit sexual activity.
+                            </label></div>
+                            <div class="option"><input id="q4_E" type="radio" name="q4" value="E"><label for="q4_E">
+                                E) Don’t know yet.
+                            </label></div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Pregunta5 -->
+                    <fieldset>
+                        <legend>5. Does it include gambling (gacha-style gameplay is NOT considered here)?</legend>
+                        <div class="options">
+                            <div class="option"><input id="q5_A" type="radio" name="q5" value="A"><label for="q5_A">
+                                A) Our game does not contain ANY TYPE gambling presence.
+                            </label></div>
+                            <div class="option"><input id="q5_B" type="radio" name="q5" value="B"><label for="q5_B">
+                                B) Our game contains glamorisation of gambling, encourages or teaches gambling (e.g. casinos or gambling halls).
+                            </label></div>
+                            <div class="option"><input id="q5_C" type="radio" name="q5" value="C"><label for="q5_C">
+                                C) Don’t know yet.
+                            </label></div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Pregunta6 -->
+                    <fieldset>
+                        <legend>6. Does it include drugs/drugs consumption?</legend>
+                        <div class="options">
+                            <div class="option"><input id="q6_A" type="radio" name="q6" value="A"><label for="q6_A">
+                                A) Our game does not contain ANY TYPE of drugs presence.
+                            </label></div>
+                            <div class="option"><input id="q6_B" type="radio" name="q6" value="B"><label for="q6_B">
+                                B) The use of tobacco, alcohol or illegal drugs is present.
+                            </label></div>
+                            <div class="option"><input id="q6_C" type="radio" name="q6" value="C"><label for="q6_C">
+                                C) Our game contains glamorisation of the use of illegal drugs.
+                            </label></div>
+                            <div class="option"><input id="q6_D" type="radio" name="q6" value="D"><label for="q6_D">
+                                D) Don’t know yet.
+                            </label></div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <aside class="summary" aria-label="Resumen y acciones">
+                        <div>
+                            <p style="color:var(--muted);margin:6px 0 0;font-size:13px">Review your answers and click "Calculate PEGI"</p>
+                        </div>
+
+                    <div class="actions">
+                        <button class="btn-primary" type="submit">Calculate PEGI</button>
+                        <button class="btn-secondary" type="reset">Clear</button>
+                    </div>
+
+                    <div id="result" class="result" aria-live="polite" role="status">
+                        <div style="text-align:center;width:100%">
+                            <div style="color:var(--muted)">The rating will appear here</div>
+                        </div>
+                    </div>
+
+                </aside>
+            </form>
+        </div>
+    </div>
+
+    <script src="pegi_rating_bonito.js"></script>
+</body>
+</html>
